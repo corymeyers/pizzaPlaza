@@ -16,23 +16,21 @@
     <div class="jumbotron">
       <form id="pizzaForm">
           <label for="elToppings">Which toppings would you like?</label>
-          <select id="elToppings">
-              <input type="checkbox" value="Pepperoni">Pepperoni  </option>
-              <input type="checkbox" value="Pickles">Pickles  </option>
-              <input type="checkbox" value="Porridge">Porridge  </option>
-              <input type="checkbox" value="Peppercini">Peppercini  </option>
-              <input type="checkbox" value="Potato">Potato  </option>
-          </select><br>
+              <input type="checkbox" name="Pepperoni">Pepperoni  </option>
+              <input type="checkbox" name="Pickles">Pickles  </option>
+              <input type="checkbox" name="Porridge">Porridge  </option>
+              <input type="checkbox" name="Peppercini">Peppercini  </option>
+              <input type="checkbox" name="Potato">Potato  </option>
+          <br>
 
           <label for="PizzaSize">Select your size</label>
-          <select id="PizzaSize">
             <input type="checkbox" value="Small">Small  </option>
             <input type="checkbox" value="Medium">Medium  </option>
             <input type="checkbox" value="Large">Large  </option>
-          </select><br>
+          <br>
 
 
-          <button type="submit" class="btn btn-warning">Submit</button>
+          <button type="submit" onsubmit='checkboxFunction' class="btn btn-warning">Submit</button>
       </form>
       <p>Here's Your Price:</p>
       <ul id="receipt">
