@@ -8,7 +8,7 @@ describe("PizzaOrder", function() {
 });
 
 describe("PizzaToppings", function() {
-  it ("collects user toppings input, tabulates the cost, and pushes it to a subtotal array", function() {
+  it ("collects user toppings input, assigns cost, and pushes it to the Tabulator integer", function() {
     var testPizzaOrder = new PizzaOrder("olive", "large", 14);
     expect(testPizzaOrder.PizzaToppings).to.equal("olive");
       });

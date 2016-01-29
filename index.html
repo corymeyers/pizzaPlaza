@@ -3,11 +3,41 @@
 <head>
   <script src="js/jquery-1.12.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title>PING PONG</title>
+  <title>Pizza Plaza</title>
 </head>
 <body>
   <div class="container">
-    
+    <header class="page-header">
+      <h1 class="name">Pizza Plaza</h1>
+    </header><br>
+
+    <p>Welcome to Pizza Plaza! Please order your pizza below:</p><br><br>
+
+    <div class="jumbotron">
+      <form id="pizzaForm">
+          <label for="elToppings">Which toppings would you like?</label>
+          <select id="elToppings">
+              <input type="checkbox" value="Pepperoni">Pepperoni  </option>
+              <input type="checkbox" value="Pickles">Pickles  </option>
+              <input type="checkbox" value="Porridge">Porridge  </option>
+              <input type="checkbox" value="Peppercini">Peppercini  </option>
+              <input type="checkbox" value="Potato">Potato  </option>
+          </select><br>
+
+          <label for="PizzaSize">Select your size</label>
+          <select id="PizzaSize">
+            <input type="checkbox" value="Small">Small  </option>
+            <input type="checkbox" value="Medium">Medium  </option>
+            <input type="checkbox" value="Large">Large  </option>
+          </select><br>
+
+
+          <button type="submit" class="btn btn-warning">Submit</button>
+      </form>
+      <p>Here's Your Price:</p>
+      <ul id="receipt">
+      </ul>
+
   </div>
 </body>
 </html>
