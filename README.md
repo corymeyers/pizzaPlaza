@@ -1,21 +1,20 @@
-# _Ping Pong_
+# _Pizza Plaza_
 
-#### _A number changer, 1-22-16_
+#### _A way to order pizza, 1-29-16_
 
 #### By _**Cory Meyers**_
 
 ## Description
 
-_I created a webpage where a user inputs a number, and the page returns a range of numbers from 1 to the chosen number with the following exceptions:
+_I created a website for a pizza company where a user can order a pizza and see the final cost.
 
-Numbers divisible by 3 are replaced with "ping"
-Numbers divisible by 5 are replaced with "pong"
-Numbers divisible by 15 are replaced with "pingpong"
-A user should be able to enter a new number and see new results over and over again._
+It allows the user to choose toppings and size for the pizza they'd like to order.
+It creates a pizza object constructor with properties for toppings and size.
+It creates a prototype method for the cost of a pizza depending on the selections chosen._
 
 ## Setup/Installation Requirements
 
-Start at index.html, and enter a number. A string of numbers and words will then be populated.
+Start at index.html, and start your order.
 
 ## Known Bugs
 
@@ -32,4 +31,4 @@ I built this site using HTML, CSS, JavaScript and JQuery.
 ### License
 
 
-Copyright (c) 2015 **_Cory Meyers_**
+Copyright (c) 2016 **_Cory Meyers_**
