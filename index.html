@@ -16,25 +16,30 @@
     <div class="jumbotron">
       <form id="pizzaForm">
           <label for="elToppings">Which toppings would you like?</label>
-              <input type="checkbox" name="Pepperoni">Pepperoni  </option>
-              <input type="checkbox" name="Pickles">Pickles  </option>
-              <input type="checkbox" name="Porridge">Porridge  </option>
-              <input type="checkbox" name="Peppercini">Peppercini  </option>
-              <input type="checkbox" name="Potato">Potato  </option>
+              <input type="checkbox" id="Pepperoni">Pepperoni
+              <input type="checkbox" id="Pickles">Pickles
+              <input type="checkbox" id="Porridge">Porridge
+              <input type="checkbox" id="Peppercini">Peppercini
+              <input type="checkbox" id="Potato">Potato
           <br>
 
           <label for="PizzaSize">Select your size</label>
-            <input type="checkbox" value="Small">Small  </option>
-            <input type="checkbox" value="Medium">Medium  </option>
-            <input type="checkbox" value="Large">Large  </option>
+            <input type="checkbox" id="Small">Small  </option>
+            <input type="checkbox" id="Medium">Medium  </option>
+            <input type="checkbox" id="Large">Large  </option>
           <br>
 
 
-          <button type="submit" onsubmit='checkboxFunction' class="btn btn-warning">Submit</button>
-      </form>
+          <button onclick='elToppings()' class="btn btn-warning">Submit</button>
+
       <p>Here's Your Price:</p>
-      <ul id="receipt">
-      </ul>
+      <p id="receipt"></p>
+
+<!-- <script>      function toppingTabulator() {
+          var x = document.getElementById("Pepperoni").checked;
+          document.getElementById("receipt").innerHTML = x;
+      }</script> -->
+  </form>
 
   </div>
 </body>

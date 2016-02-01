@@ -1,15 +1,9 @@
 describe("PizzaOrder", function() {
-  it ("collects user input, and creates a new pizza object", function() {
-    var testPizzaOrder = new PizzaOrder("olive", "large", 14);
-    expect(testPizzaOrder.PizzaToppings).to.equal("olive");
-    expect(testPizzaOrder.PizzaSize).to.equal("large");
-    expect(testPizzaOrder.PizzaPrice).to.equal(14);
-  });
-});
+  var testPizzaOrder = new PizzaOrder(1, "large", 14);
 
-describe("PizzaToppings", function() {
-  it ("collects user toppings input, assigns cost, and pushes it to the Tabulator integer", function() {
-    var testPizzaOrder = new PizzaOrder("olive", "large", 14);
-    expect(testPizzaOrder.PizzaToppings).to.equal("olive");
-      });
+  it ("collects user toppings input, and finds the value", function() {
+    expect(testPizzaOrder.PizzaToppings("Pepperoni")).to.equal(1);
+  });
+
+
 });

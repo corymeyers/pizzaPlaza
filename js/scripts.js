@@ -1,56 +1,38 @@
-function PizzaOrder (PizzaToppings, PizzaSize, PizzaPrice) {
-  this.PizzaToppings = PizzaToppings;
-  this.PizzaSize = PizzaSize;
-  this.PizzaPrice = PizzaPrice;
-  this.Tabulator = 0;
-}
+function pizzaOrder(pizzaSize, elToppings) {
+  this.pizzaSize = pizzaSize;
+  this.elToppings = elToppings;
+};
 
-PizzaOrder.prototype.PizzaToppings=function() {
-  PizzaOrder.ToppingsSubtotal = 0;
-  if (this.Pepperoni = true) {
-    subTotal + .5;
-  }
-  if (this.Pickles == true) {
-    subTotal + .5;
-  }
-  if (this.Porridge == checked) {
-    subTotal + .5;
-  }
-  if (this.Peppercini == checked) {
-    subTotal + .5;
-  }
-  if (this.Potato == checked) {
-    subTotal + .5;
-  }
-  return subTotal;
-}
-
-PizzaOrder.prototype.PizzaSize=function() {
-  var PizzaSizeSubtotal = 0;
-  if (this.PizzaSize === "Small") {
-     PizzaSizeSubtotal += 10;
-    }
-  if (this.PizzaSize === "Medium") {
-     PizzaSizeSubtotal += 14;
-  }
-  if (this.PizzaSize === "Large") {
-     PizzaSizeSubtotal += 18;
-  }
-  return PizzaSizeSubtotal;
-}
 
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
 
-    var Pepperoni = $("select#Pepperoni").val();
-    var Pickles = $("select#Pickles").val();
-    var Porridge = $("select#Porridge").val();
-    var Peppercini = $("select#Peppercini").val();
-    var Potato = $("select#Potato").val();
+function elToppings() {
+  var toppingSum = 0;
 
-    $("ul#receipt").append("<li>"+"$"+"<span class='finalPrice'>" + PizzaOrder.Tabulator() + "</span></li>");
-      $("input").val("");
+  if(document.getElementById("Pepperoni").checked) {
+  toppingSum += 1;
+  }
+  if(document.getElementById("Pickles").checked) {
+  toppingSum += 4;
+  }
+  if(document.getElementById("Porridge").checked) {
+  toppingSum += 9;
+  }
+  if(document.getElementById("Peppercini").checked) {
+  toppingSum += 5;
+  }
+  if(document.getElementById("Potato").checked) {
+  toppingSum += 2;
+  }
 
-});
+  var price = toppingSum;
+  document.getElementById('receipt').innerHTML = price;
+ }
+
+elToppings();
+
+
+  });
 });
