@@ -27,9 +27,10 @@ function elToppings() {
   toppingSum += 2;
   }
 
+
   var price = toppingSum;
   document.getElementById('receipt').innerHTML = price;
- }
+}
 
 elToppings();
 
