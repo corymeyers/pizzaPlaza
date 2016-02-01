@@ -3,7 +3,6 @@ function pizzaOrder(pizzaSize, elToppings) {
   this.elToppings = elToppings;
 };
 
-
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
@@ -26,14 +25,19 @@ function elToppings() {
   if(document.getElementById("Potato").checked) {
   toppingSum += 2;
   }
-
-
+  if(document.getElementById("Small").checked) {
+  toppingSum += 10;
+  }
+  if(document.getElementById("Medium").checked) {
+  toppingSum += 15;
+  }
+  if(document.getElementById("Large").checked) {
+  toppingSum += 20;
+  }
   var price = toppingSum;
-  document.getElementById('receipt').innerHTML = price;
+  document.getElementById('receipt').innerHTML = "$" + price;
 }
-
 elToppings();
-
 
   });
 });
